@@ -16,7 +16,7 @@ def WordCloudGenOnMEDLINE(resultsfile, filteroutwords = []):
     WorkingAbstracts, AbsString = GetMedlineAbstracts(medline_results)
     
     # Filter out the words that are not to be included in the word cloud.
-    if len(filteroutwords != 0):
+    if len(filteroutwords) != 0:
         TitleString = WordFilter(TitleString, filteroutwords)
         AbsString = WordFilter(AbsString, filteroutwords)
     ArticleHeaderText = TitleString + AbsString
